@@ -9,7 +9,7 @@ import * as Script from './../../JavaScript/funcoes';
           }
       }
       async componentDidMount(){
-        let resposta = await fetch("http://localhost/projetos/React/react/teste/src/backend/Bancodedados/php/solicitar.php?andromeda=produtos");
+        let resposta = await fetch("http://localhost/projetos/React/react/teste/src/backend/Bancodedados/php/solicitar.php?andro=produtos");
         let dados = await resposta.json();
         this.setState({BD: dados});
     }

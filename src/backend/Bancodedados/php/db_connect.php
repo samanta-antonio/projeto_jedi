@@ -24,7 +24,7 @@ function semRetorno($sql){
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $database = "andromeda";
+    $database = "andro";
 
     $connect = mysqli_connect($servername, $username, $password, $database);
     ;
