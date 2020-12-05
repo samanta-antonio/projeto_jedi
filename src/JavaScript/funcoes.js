@@ -1,4 +1,4 @@
-function exibir_categoria(categoria){
+export function exibir_categoria(categoria){
   //alert(categoria);
 
   let elementos = document.getElementsByClassName('box_produtos');
@@ -12,21 +12,25 @@ function exibir_categoria(categoria){
   }
 }
 
-  let exibir_todos = () => {
+  export let exibir_todos = () => {
   let elementos = document.getElementsByClassName('box_produtos');
   for (var i = 0; i < elementos.length; i++) {
-    elementos[i].style = "display:inlie-block";
+    elementos[i].style = "display:inline-block";
   }
 }
 
 
-function mOver(obj)
+export function mOver(obj)
 {
 obj.innerHTML="Utilize o cupom UNI10 em sua primeira compra!"
 }
 
-function mOut(obj)
+export function mOut(obj)
 {
 obj.innerHTML="Aproveite os melhores descontos deste Sistema Planetário."
 }
 
+export function comprar(){
+  console.log("comprou");
+
+}

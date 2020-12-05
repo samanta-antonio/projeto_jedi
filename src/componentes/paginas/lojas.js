@@ -9,35 +9,36 @@ export default class Lojas extends React.Component{
             <hr/>
             <br/><br/><br/><br/>
            <table border="0" width="100%" celpadding="20">
+        
                 <tbody>
-                    <tbody width="20%">
+                    <td width="20%">
                         <h3>São Paulo</h3>
                         <p>Avenida Estrelas, 30</p>
                         <p>Centro</p>
                         <p>(11)2323-2121</p>
-                    </tbody>
+                    </td>
 
-                    <tbody width="20%">
+                    <td width="20%">
                         <h3>Bauru</h3>
                         <p>Rua Messier, 20</p>
                         <p>Jardim Colonial</p>
                         <p>(14)7770-7077</p>
-                    </tbody>
+                    </td>
 
-                    <tbody width="20%">
+                    <td width="20%">
                         <h3>Rio de Janeiro</h3>
                         <p>Avenida Sagan, 562</p>
                         <p>Parque Super Novas</p>
                         <p>(21)45-8998</p>
-                    </tbody>
+                    </td>
 
-                    <tbody width="20%">
+                    <td width="20%">
                         <h3 style={{backgroundColor: "rgb(0, 0, 0)"}}><strong>Em breve nova unidade!</strong></h3>
                         <p>Salvador</p>
                         <p>Rua Itaqua,230</p>
                         <p>Parque das Flores</p>
                         
-                    </tbody>
+                    </td>
                 </tbody>
            </table>   
            </div> 

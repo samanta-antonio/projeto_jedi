@@ -1,3 +1,6 @@
+create database andro
+default collate utf8mb4_general_ci
+default character set utf8mb4;
 use andro;
 
 
@@ -10,7 +13,7 @@ preco_promo char(15),
 imagens varchar(100),
 
 primary key (id)
-);
+)default character set utf8mb4;
 
 SELECT * from andro.produtos;
 
@@ -61,7 +64,7 @@ telefone varchar(50),
 produto varchar(500),
 quantidade float,
 primary key (id)
-);
+)default character set utf8mb4;
 
 SELECT * from andro.pedidos;
 
@@ -76,18 +79,26 @@ insert into pedidos (nome, endereco,email, telefone, produto, quantidade)
 values ("Jordana Bilis Reis","Av.Esperança, 890, Assis-SP,09802345","jordanabili@ig.com","14557302349","2",3);
 
 
+create table clientes(
+id_cliente int auto_increment not null,
+nome varchar(70) not null,
+email varchar (100) not null,
+primary key (id_cliente)
+)default charset = utf8mb4;
 
 create table comentarios(
-id int auto_increment,
-nome varchar(100),
-msg varchar(500),
-email varchar(500),
-primary key (id)
-);
+id int auto_increment not null,
+id_cliente int not null,
+msg varchar(500) not null,
+primary key (id),
+foreign key(id_cliente) references clientes (id_cliente)
+)default charset = utf8mb4;
 
 SELECT * from andro.comentarios;
 
 insert into comentarios (nome, msg, email)
 values ("Marina Belo","Aumenta quanto?","mar.ina@ig.com");
 
+insert into comentarios (nome, msg, email)
+values ("Andressa Pontes","Da pra ver a lua?","andressapontes@ig.com");
 

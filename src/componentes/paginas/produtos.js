@@ -44,13 +44,13 @@ import * as Script from './../../JavaScript/funcoes';
           
           {this.state.BD && this.state.BD.map((item, id)=>
             
-            <div className="box_produtos" id="">
-            <img className="Imagens" scr="" alt=""/>
+            <div className="box_produtos" id={item['categoria']}>
+            <img className="Imagens" src={require('./../../' + item['imagens']).default} alt=""/>
             <br/>
-            <p className="descricao">{item['categoria']}</p>
+            <p className="descricao">{item['descricao']}</p>
             <hr/>
-            <p className="descricao">de R$ <strike></strike> reais por </p><br/>
-            <p className="precos"> R$ <strong></strong> à vista</p><br/>
+            <p className="descricao">de  <strike> {parseInt(item['preco_antigo']).toLocaleString('pt-br',{style:'currency', currency: 'BRL'})} </strike>  por </p><br/>
+            <p className="precos">   <strong>{parseInt(item['preco_promo']).toLocaleString('pt-br', {style:'currency', currency: 'BRL'})}</strong> à vista</p><br/>
             <input type="button" onClick={() => Script.comprar()} value="Comprar"/>
             </div>
             

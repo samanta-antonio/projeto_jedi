@@ -4,7 +4,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $database = "andromeda";
+    $database = "andro";
 
     // Criando conexão
     $connect = mysqli_connect($servername, $username, $password, $database);
@@ -14,7 +14,7 @@
         echo "Falha na conexão: "  . mysqli_connect_error;
     }
 
-    mysqli_set_charset($connect, "utff8mb4");
+    mysqli_set_charset($connect, "utf8mb4");
     $resultado = mysqli_query($connect,$sql);
     mysqli_close($connect);
     return $resultado;
@@ -33,7 +33,7 @@ function semRetorno($sql){
         echo "Falha na conexão: "  . mysqli_connect_error;
      }
 
-     mysqli_set_charsert($connect, "utff8mb4");
+     mysqli_set_charset($connect, "utf8mb4");
      mysqli_query($connect,$sql);
      mysqli_close($connect);
 
