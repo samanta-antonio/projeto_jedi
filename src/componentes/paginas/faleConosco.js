@@ -9,7 +9,7 @@ export default class FaleConosco extends React.Component{
     }
 
     async componentDidMount(){
-        const resposta = await fetch ("http://localhost/projetos/React/react/teste/src/backend/Bancodedados/php/pegarMensagens.php?andro=comentarios");
+        const resposta = await fetch ("http://localhost/projetos/React/react/teste/src/backend/Bancodedados/php/pegarMensagens.php");
         const json = await resposta.json();
         this.setState({mensagem: json});
        
@@ -62,7 +62,7 @@ export default class FaleConosco extends React.Component{
                                 {this.state.mensagem.map(msg=>(
                                     <div className = "list-group-item text-primary">
                                     <h5>{msg.nome}</h5>
-                                    <p>{msg.mensagem}</p>
+                                    <p>{msg.msg}</p>
                                     </div>
                                    ))}
 
@@ -75,7 +75,12 @@ export default class FaleConosco extends React.Component{
            
             </div>
             </center>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/>   <hr/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/>   
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/>  
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/> 
+            
+            
+             <hr/>
             </div>
           
            

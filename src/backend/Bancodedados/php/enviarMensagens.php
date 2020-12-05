@@ -5,11 +5,12 @@
         $msg = $_POST['mensagem'];
         $email = $_POST['email'];
 
-        $sql = "insert into clientes (nome, email) values ('$nome','$email');";
+        $sql = "INSERT into clientes (nome, email) values ('$nome','$email');";
         semRetorno($sql);
-        $sqlResultado = "select id_cliente from clientes where email = '$email'";
+        $sqlResultado = "SELECT id_cliente from clientes where email = '$email'";
         $id_cliente = mysqli_fetch_assoc(comRetorno($sqlResultado));
-        $sqlComentarios = "insert into comentarios (id_cliente, mensagem) values ('$id_cliente','$msg');";
+        $id_final = $id_cliente ['id_cliente'];
+        $sqlComentarios = "INSERT into comentarios (id_cliente, msg) values ('$id_final','$msg');";
         semRetorno($sqlComentarios);
         header ("Access-Control-Allow-Origin: * ");
 
